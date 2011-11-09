@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<!--an update-->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8;"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript; charset=UTF-8;"/>
+<meta http-equiv="Content-Style-Type" content="text/css; charset=UTF-8;"/>
+<meta http-equiv="Content-Language" content="en"/>
+<meta http-equiv="imagetoolbar" content="no"/>
+<meta name="author" content="<?php echo META_AUTHOR; ?>"/>
+<meta name="copyright" content="<?php echo META_COPYRIGHT; ?>"/>
+<meta name="description" content="<?php echo META_DESCRIPTION; ?>"/>
+<meta name="keywords" content="<?php echo META_KEYWORDS; ?>"/>
+<meta name="robots" content="all"/>
+<title>Search maps of Japan... IN ENGLISH! | Mapanese</title>
+<link type="image/x-icon" href="/favicon.ico" rel="shortcut icon"/>
+<link type="text/css" href="/css/mapanese.css" rel="stylesheet"/>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="/js/library.js"></script>
+<script type="text/javascript" src="/js/ajax.js"></script>
+<script type="text/javascript" src="/js/infobox.js"></script>
+<script type="text/javascript" src="/js/en_map_labels.js"></script>
+<script type="text/javascript" src="/js/home.js"></script>
+</head>
+<body onload='focusOn("q"); loadGoogleMaps(<?php echo $this->resultant_ja_address; ?>); /*applyFudges(globalMap);*/'>
+<div id="header">
+	
+		<h1 class="first_header" style="margin-left:0.5em;">Mapanese</h1>
+		<form action="/" method="get" onsubmit="removeLinkToThisPage(); return ajaxSubmit();">
+			<fieldset style="border-style:none; text-align:center;">
+				<div>
+					<input type="text" name="q" id="q" size="40" maxlength="2048" value="<?php echo $this->requestForXhtml['q']; ?>"  style="border:1px solid #BBBBBB;"/>
+					<input type="submit" value="Search" onclick="if(this.value == ''){return false;}"/>
+				</div>
+				<div style="font-size:smaller;">
+					<input type="radio" name="type" id="type_auto" value="auto" <?php echo checked_when_array_key_is_x($this->request, 'type', 'auto'); ?>/>
+					<label for="type_auto">auto</label>
+					<input type="radio" name="type" id="type_en_address" value="en_address" <?php echo checked_when_array_key_is_x($this->request, 'type', 'en_address'); ?>/>
+					<label for="type_en_address" title="Example: Takaido-nishi 3-5-24, Suginami-ku, Tokyo 168-8505">en address</label>
+					<input type="radio" name="type" id="type_postcode" value="postcode" <?php echo checked_when_array_key_is_x($this->request, 'type', 'postcode'); ?>/>
+					<label for="type_postcode" title="Example: 500-1234 or the first three digits: 100">postcode</label>
+					<input type="radio" name="type" id="type_ja_address" value="ja_address" <?php echo checked_when_array_key_is_x($this->request, 'type', 'ja_address'); ?>/>
+					<label for="type_ja_address" title="Example: 東京都杉並区高井戸西3-5-24">ja address</label>
+					<!--
+					<input type="radio" name="type" id="type_gm_jp_link" value="gm_jp_link" <?php echo checked_when_array_key_is_x($this->request, 'type', 'gm_ja_link'); ?>/>
+					<label for="type_gm_jp_link" title="Example: http://maps.google.co.jp/maps?f=q&amp;hl=ja&geocode=&amp;q=tokyo&ie=UTF8&amp;z=4&amp;iwloc=addr">gm jp link</label>
+					-->
+					<!--Layout hack to align the radio labels-->
+					<input type="submit" value="Search" style="visibility:hidden;"/>
+				</div>
+			</fieldset>
+		</form>
+		<span style="float:right; font-size:smaller; margin-right:0.5em;"><a href="javascript:linkToThisPage();">Link to this page</a></span>
+		<img src="/img/link.png" alt="" style="float:right;"/>
+		<span id="link_to_this_page" style="float:right;"></span>
+	
+	
+</div>
+
+<div id="content" style="height:80%; width:100%;">
+	<div id="map" style="height:100%; width:100%;"><?php echo $this->resultType; ?><?php echo $this->noscriptInfo; ?></div>
+</div>
+
+<div id="footer" style="clear:left; font-size:smaller;">
+	<span style="float:right; color:red; font-size:smaller; margin-right:0.5em;">v1.0gh</span>
+	<input type="checkbox" style="margin-left:0.5em; vertical-align:bottom;" name="en_labels" id="en_labels" onclick="setEnglishLabels(this.checked);"/>
+	<label for="en_labels" style="float:none;">English labels</label>
+	<input type="checkbox" style="vertical-align:bottom;" name="level_suffixes" id="level_suffixes" checked="checked" onclick="setLevelSuffixes(this.checked);"/>
+	<label for="level_suffixes" style="float:none;">Level suffixes</label>
+	<input type="checkbox" style="vertical-align:bottom;" name="transparent_labels" id="transparent_labels" onclick="toggleTransparentLabels(this.checked);"/>
+	<label for="transparent_labels" style="float:none;">Transparent labels</label>	
+	<span style="margin-left:2em;"><?php echo META_COPYRIGHT; ?></span>
+	(<a href="/mapanese_info.html">about Mapanese</a>)
+	<span style="margin-left:2em;"><img src="/img/twitter.gif" alt="" style="vertical-align:bottom;"/><a href="http://twitter.com/mapanese">Help and info</a></span>
+</div>
+</body>
+</html>

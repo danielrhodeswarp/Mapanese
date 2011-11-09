@@ -1,0 +1,23 @@
+<VirtualHost *:80>
+        ServerName gh-mapanese.home
+        ServerAlias www.gh-mapanese.home
+
+        DocumentRoot /place/where/you/put/Mapanese/docroot
+        <Directory /place/where/you/put/Mapanese/docroot>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+                # This directive allows us to have apache2's default start page
+                # in /apache2-default/, but still have / go to the right place
+                #RedirectMatch ^/$ /apache2-default/
+        </Directory>
+
+        ErrorLog /var/log/apache2/gh-mapanese.home_error.log
+
+        # Possible values include: debug, info, notice, warn, error, crit,
+        # alert, emerg.
+        LogLevel warn
+
+        CustomLog /var/log/apache2/gh-mapanese.home_access.log combined
+</VirtualHost>

@@ -1,0 +1,43 @@
+Via Firefox on Linux
+~~~~~~~~~~~~~~~~~~~~
+
+this listings format:
+search term
+link
+
+Here we go:
+
+千葉県鴨川市太海
+http://maps.google.co.jp/maps?f=q&hl=ja&geocode=&q=%E5%8D%83%E8%91%89%E7%9C%8C%E9%B4%A8%E5%B7%9D%E5%B8%82%E5%A4%AA%E6%B5%B7&ie=UTF8&ll=35.082691,140.096455&spn=0.035329,0.058365&z=14&iwloc=addr
+
+tokyo
+http://maps.google.co.jp/maps?f=q&hl=ja&geocode=&q=tokyo&ie=UTF8&z=4&iwloc=addr
+
+
+
+
+Notes
+~~~~~
+
+[]iwloc=addr will show the info window??
+
+[]z=level sets the zoom level
+
+[]hl=isoLangCode sets the *H*uman *L*anguage of the interface
+
+[]f=formatCode appears to set the format of the url. 'q' being a place/address search,
+    'd' being transit directions and 'l' being business locator
+    
+    
+    
+    
+IFRAME stuff
+~~~~~~~~~~~~
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.jp/maps?f=q&amp;hl=ja&amp;geocode=&amp;q=%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA&amp;ie=UTF8&amp;ll=35.723103,139.776649&amp;spn=0.140254,0.233459&amp;z=12&amp;iwloc=addr&amp;output=embed&amp;s=AARTsJoC5ug6QpDcLoJbbRZfJ0YC_9Hpeg">
+</iframe>
+<br />
+<small>
+<a href="http://maps.google.co.jp/maps?f=q&amp;hl=ja&amp;geocode=&amp;q=%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA&amp;ie=UTF8&amp;ll=35.723103,139.776649&amp;spn=0.140254,0.233459&amp;z=12&amp;iwloc=addr&amp;source=embed" style="color:#0000FF;text-align:left">
+大きな地図で見る
+</a>
+</small>

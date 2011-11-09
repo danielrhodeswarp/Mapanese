@@ -1,0 +1,16 @@
+[] You'll need an Apache (others might work) vhost with mod_rewrite
+(but only for the non-top static pages).
+See conf/VHOST.sample for an idea
+
+[] Above Apache will need to have PHP rocking and rolling
+
+[] You'll need to create a database in MySQL 5 and
+then dump:
+  -] sql/mapanese_structure.sql
+  -] sql/mapanese_data.sql
+into it.
+
+[] Edit conf/gh-mapanese.home_conf.php to have the appropriate
+MySQL access credentials
+
+[] You should be good to go now

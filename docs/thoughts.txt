@@ -1,0 +1,5 @@
+[] http://www.hyperdia.com/cgi-english/hyperWeb.cgi
+
+[] http://www.jorudan.co.jp/english/norikae/e-norikeyin.html
+
+[] indices on DB fields that are heavily searched on? (lat/lon of labels etc)

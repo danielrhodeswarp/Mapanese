@@ -1,0 +1,109 @@
+*
+{
+	padding:0;
+	margin:0;
+}
+
+html, body
+{
+	min-height:100%;
+	/*height:auto !important;*/	/*is this ever needed?*/
+	height:100%
+}
+
+h1
+{
+	font-weight:bold;
+	font-size:1em;
+}
+
+div#header
+{
+	height:15%;
+	min-height:15%;
+}
+
+div#content
+{
+	min-height: 80%;
+	height:80%;
+}
+
+div#footer
+{
+	height:5%;
+	min-height:5%;
+}
+
+/*following CSS classes for labels no longer used as InfoBox can't accept a CSS class
+(only a style attribute object)*/
+.label_ken, .label_shi, .label_ku, .label_gun, .label_gun_cho, .label_cho, .label_son, .label_basho
+{
+	padding:1px;
+	border:1px solid #BBBBBB;
+	letter-spacing:0px;
+	color:black;
+	text-align:center;
+	display:block;
+	/*font-family:verdana;*/
+	font-family:monospace;
+	font-size:12px;
+	white-space:nowrap;
+}
+
+.label_ken
+{
+	background-color:#ADD8E6;	/*lightblue*/
+	/*font-size:15px;*/
+	/*z-index:100;*/
+	/*font-size:9px;*/
+}
+
+.label_shi 
+{
+	background-color:#90EE90;	/*lightgreen*/
+	/*font-size:13px;*/
+	/*z-index:80;*/
+}
+
+.label_ku 
+{
+	background-color:#FF8C00;	/*darkorange*/
+	/*font-size:12px;*/
+	/*z-index:70;*/
+}
+
+.label_gun 
+{
+	background-color:#8A2BE2;	/*blueviolet*/
+	/*font-size:13px;*/
+	/*z-index:70;*/
+}
+
+.label_gun_cho 
+{
+	background-color:#8A2BE2;	/*blueviolet*/
+	/*font-size:12px;*/
+	/*z-index:70;*/
+}
+
+.label_cho
+{
+	background-color:#FFA;	/*Post-it yellow*/
+	/*font-size:11px;*/
+	/*z-index:60;*/
+}
+
+.label_son
+{
+	background-color:#FFA;	/*Post-it yellow*/
+	/*font-size:11px;*/
+	/*z-index:60;*/
+}
+
+.label_basho
+{
+	background-color:#FFA;	/*Post-it yellow*/
+	/*font-size:11px;*/
+	/*z-index:60;*/
+}

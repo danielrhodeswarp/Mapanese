@@ -1,0 +1,20 @@
+[] need "no connection to Google or Zenrin" type disclaimer
+
+[] ensafen the SQL commands that use the user's input
+(ie. use $this->requestForDb['blah'] or whatever)
+
+[] Is something fishy going on with the form submission/onsubmit overriding thing? [This *seems* to have improved...]
+
+[] Forcibly ignore a search tokens of "japan" ("日本" is ignored for a ja-search)
+
+[] Try first to split on commas, THEN split on spaces
+(for, eg, "tsukinoechou, gifu city, japan" type searches)
+
+[] sort out ku/du (starting from DB level)
+
+[] always display multiple results where appropriate
+
+[] somehow integrate with Google Transit (for which there is no API!). Google Transit also has j-keitai support by the
+way. PLease see http://groups.google.com/group/googletransit/browse_thread/thread/d99ef12728229cb8/c167cac667745a0c?lnk=gst&q=api+transit#c167cac667745a0c
+
+[] need "naninaniJU / naninaniJUU" aliased searching support

@@ -1,0 +1,16 @@
+RewriteEngine on
+
+#FOR LOCAL DEV ONLY
+#www.gh-mapanese.home --> gh-mapanese.home
+RewriteCond %{HTTP_HOST} ^www\.gh-mapanese\.home
+RewriteRule ^(.*)$ http://gh-mapanese.home/$1 [R=permanent,L]
+
+#FOR LIVE
+#www.mapanese.info --> mapanese.info
+#RewriteCond %{HTTP_HOST} ^www\.mapanese\.info
+#RewriteRule ^(.*)$ http://mapanese.info/$1 [R=permanent,L]
+
+#HTMLise our static pages that actually have a bit of PHP in them (and therefore a .php extension)
+RewriteRule ^mapanese_contact_thanks.html$ mapanese_contact_thanks.php [L]
+RewriteRule ^mapanese_info.html$ mapanese_info.php [L]
+RewriteRule ^mapanese_formats.html$ mapanese_formats.php [L]
