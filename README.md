@@ -6,6 +6,8 @@ It is an *English language enabling* of Google Maps' map of Japan. This means th
 
 Mapanese は Google マップ(日本国)上に、英語／ローマ字の場所名を付ける、英語／ローマ字の住所検索を使用可能にするソフトです。
 
+See it live at http://mapanese.info
+
 ## What does it need to run?
 
 * Apache webserver (others might work)
