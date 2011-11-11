@@ -3,6 +3,7 @@
 ## What is it?
 
 It is an *English language enabling* of Google Maps' map of Japan. This means that places have English labels and searches for Japanese addresses can be performed using English.
+
 Mapanese は Google マップ(日本国)上に、英語／ローマ字の場所名を付ける、英語／ローマ字の住所検索を使用可能にするソフトです。
 
 ## What does it need to run?
