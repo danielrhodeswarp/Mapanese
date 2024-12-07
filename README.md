@@ -1,4 +1,4 @@
-# Mapanese
+# mapanese
 
 ## What is it?
 
